@@ -1,0 +1,59 @@
+$color-background: #4B0082;
+$color-border: #2D004B;
+$color-primary: #fff;
+$color-secondary: rgb(34, 104, 34);
+
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-background;
+  box-sizing: border-box;
+  .control-panel-container{
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    .pickbutton{
+      margin: 10px;
+      border-radius: 20px;
+      color: $color-primary;
+      font-size: 20pt;
+      background-color: $color-secondary;
+    }
+  }
+  .container {
+    margin: auto;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-width: 600px;
+    .avatar-container{
+      width: calc(100% / 3);
+      padding-top: calc(100% / 3);
+      height: 0;
+      position: relative;
+      .avatar-holder{
+        position: absolute;
+        margin: 2px;
+        border: 5px solid $color-border;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .avatar-holder-active{
+        border: 5px solid $color-secondary;
+      }
+    }
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
