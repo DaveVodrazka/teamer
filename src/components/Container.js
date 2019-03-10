@@ -4,8 +4,8 @@ import Avatar from './Avatar';
 function Container(props) {
     return (
         <div className="container">
-            {props.bgs.map((bg, index) => (
-                <Avatar bg={bg} key={index} />
+            {props.people.map((person, index) => (
+                <Avatar person={person} key={index} />
             ))}
         </div>
     );
