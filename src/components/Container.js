@@ -5,7 +5,7 @@ function Container(props) {
     return (
         <div className="container">
             {props.people.map((person, index) => (
-                <Avatar person={person} key={index} />
+                <Avatar person={person} key={index} activate={props.activate} />
             ))}
         </div>
     );

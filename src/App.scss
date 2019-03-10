@@ -22,6 +22,10 @@ $color-secondary: rgb(34, 104, 34);
       color: $color-primary;
       font-size: 20pt;
       background-color: $color-secondary;
+      opacity: .5;
+    }
+    .pickbutton-active{
+      opacity: 1;
     }
   }
   .container {

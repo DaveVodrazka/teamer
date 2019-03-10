@@ -4,6 +4,29 @@ import Container from './components/Container';
 import ControlPanel from './components/ControlePanel';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {active: []};
+    this.handleActivate.bind(this);
+  }
+
+  handleActivate(name, active) {
+    if (active) {
+      this.setState((state) => {
+        state.active.push(name);
+        return state;
+      });
+    } else {
+      const index = this.state.active.indexOf(name);
+      if (index !== -1) {
+        this.setState((state) => {
+          state.active.splice(index, 1);
+          return state;
+        });
+      }
+    }
+  }
+
   render() {
     const people = [
       {name: 'David', bg: 'https://neznam.szn.cz/media/thumbs/photos/5263.jpg.148x203_q85_crop-smart.jpg?1534250268'},
@@ -14,8 +37,8 @@ class App extends Component {
     ];
     return (
       <div className="App">
-        <ControlPanel />
-        <Container people={people} />
+        <ControlPanel active={this.state} />
+        <Container people={people} activate={this.handleActivate.bind(this)} />
       </div>
     );
   }

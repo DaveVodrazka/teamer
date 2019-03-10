@@ -7,9 +7,18 @@ function Avatar(props) {
         backgroundPosition: 'center'
     };
     const [active, changeActive] = useState(false);
+
     return(
-        <div className='avatar-container' onClick={() => changeActive(!active)}>
-            <div className={'avatar-holder ' + (active ? 'avatar-holder-active' : '')} style={bgImage}><h4>{props.person.name}</h4></div>
+        <div className='avatar-container' onClick={() => {
+                props.activate(props.person.name, !active);
+                changeActive(!active);
+            }}>
+            <div
+                className={'avatar-holder ' + (active ? 'avatar-holder-active' : '')}
+                style={bgImage}
+            >
+                <h4>{props.person.name}</h4>
+            </div>
         </div>
     );
 }
