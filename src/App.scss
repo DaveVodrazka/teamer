@@ -68,6 +68,24 @@ $color-secondary: rgb(34, 104, 34);
       }
     }
   }
+  .modal{
+    position: absolute;
+    top: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 800px;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    &.hide{
+      display: none;
+    }
+    &.show{
+      display: block;
+    }
+  }
 }
 
 .App-link {
