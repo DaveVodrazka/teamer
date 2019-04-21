@@ -15,8 +15,20 @@ class ControlPanel extends Component {
         const res = shuffle(people);
         console.log(`Blue team is ${res[0]} and ${res[1]}.\nRed team is ${res[2]} and ${res[3]}.`);
         this.setState({
-            modal: true,
             people: res,
+        })
+        this.openModal();
+    }
+
+    openModal() {
+        this.setState({
+            modal: true,
+        })
+    }
+    
+    closeModal() {
+        this.setState({
+            modal: false,
         })
     }
     
@@ -31,7 +43,7 @@ class ControlPanel extends Component {
                         Team It!
                     </button>
                 </div>
-                <Modal show={this.state.modal} people={this.state.people} />
+                <Modal show={this.state.modal} people={this.state.people} close={this.closeModal.bind(this)} />
             </>
         );
     }

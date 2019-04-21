@@ -85,6 +85,20 @@ $color-secondary: rgb(34, 104, 34);
     &.show{
       display: block;
     }
+    .close-button{
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      right: 0;
+      background: none;
+      padding: 0;
+      border: none;
+      img{
+        width: inherit;
+        height: inherit;
+      }
+    }
   }
 }
 
