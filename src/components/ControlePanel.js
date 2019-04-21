@@ -13,7 +13,7 @@ class ControlPanel extends Component {
     pickTeams(people) {
         if (this.state.active.length < 4) return;
         const res = shuffle(people);
-        console.log(`Blue team is ${res[0]} and ${res[1]}.\nRed team is ${res[2]} and ${res[3]}.`);
+        console.log(res);
         this.setState({
             people: res,
         })

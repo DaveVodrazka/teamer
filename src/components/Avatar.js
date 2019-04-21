@@ -10,7 +10,7 @@ function Avatar(props) {
 
     return(
         <div className='avatar-container' onClick={() => {
-                props.activate(props.person.name, !active);
+                props.activate(props.person, !active);
                 changeActive(!active);
             }}>
             <div

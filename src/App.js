@@ -10,14 +10,15 @@ class App extends Component {
     this.handleActivate.bind(this);
   }
 
-  handleActivate(name, active) {
+  handleActivate(person, active) {
+    console.log(this.state.active);
     if (active) {
       this.setState((state) => {
-        state.active.push(name);
+        state.active.push(person);
         return state;
       });
     } else {
-      const index = this.state.active.indexOf(name);
+      const index = this.state.active.findIndex(active => active.id === person.id);
       if (index !== -1) {
         this.setState((state) => {
           state.active.splice(index, 1);
@@ -29,11 +30,11 @@ class App extends Component {
 
   render() {
     const people = [
-      {name: 'David', bg: 'https://neznam.szn.cz/media/thumbs/photos/5263.jpg.148x203_q85_crop-smart.jpg?1534250268'},
-      {name: 'Pavel', bg: 'https://neznam.szn.cz/media/thumbs/photos/4162.jpg.148x203_q85_crop-smart.jpg?1537786244'},
-      {name: 'Filip', bg: 'https://neznam.szn.cz/media/thumbs/photos/5069.jpg.148x203_q85_crop-smart.jpg?1512568192'},
-      {name: 'Honza', bg: 'https://neznam.szn.cz/media/thumbs/photos/4878.jpg.148x203_q85_crop-smart.jpg?1506946589'},
-      {name: 'Míša', bg: 'https://neznam.szn.cz/media/thumbs/photos/4615.jpg.148x203_q85_crop-smart.jpg?1517819880'},
+      {name: 'David', bg: 'https://neznam.szn.cz/media/thumbs/photos/5263.jpg.148x203_q85_crop-smart.jpg?1534250268', id: 1},
+      {name: 'Pavel', bg: 'https://neznam.szn.cz/media/thumbs/photos/4162.jpg.148x203_q85_crop-smart.jpg?1537786244', id: 2},
+      {name: 'Filip', bg: 'https://neznam.szn.cz/media/thumbs/photos/5069.jpg.148x203_q85_crop-smart.jpg?1512568192', id: 3},
+      {name: 'Honza', bg: 'https://neznam.szn.cz/media/thumbs/photos/4878.jpg.148x203_q85_crop-smart.jpg?1506946589', id: 4},
+      {name: 'Míša', bg: 'https://neznam.szn.cz/media/thumbs/photos/4615.jpg.148x203_q85_crop-smart.jpg?1517819880', id: 5},
     ];
     return (
       <div className="App">

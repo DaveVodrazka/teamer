@@ -93,10 +93,42 @@ $color-secondary: rgb(34, 104, 34);
       right: 0;
       background: none;
       padding: 0;
+      margin: 5px;
       border: none;
       img{
         width: inherit;
         height: inherit;
+      }
+    }
+    .team-holder{
+      width: 50%;
+      margin-top: 58px;
+      &.blue{
+        float: left;
+        background: blue;
+      }
+      &.red{
+        float: right;
+        background: red;
+      }
+      .player-holder{
+        width: calc(100% - 20px);
+        position: relative;
+        margin: 10px;
+        &:before{
+          content: "";
+          display: block;
+          padding-top: 100%; 	/* initial ratio of 1:1*/
+        }
+      }
+      .player-name-plate{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $color-primary;
+        text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+        margin: 10px;
+        font-size: 20pt;
       }
     }
   }
