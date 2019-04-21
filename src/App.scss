@@ -27,6 +27,9 @@ $color-secondary: rgb(34, 104, 34);
     .pickbutton-active{
       opacity: 1;
     }
+    .pickbutton:focus{
+      outline: none;
+    }
   }
   .container {
     margin: auto;
@@ -50,6 +53,15 @@ $color-secondary: rgb(34, 104, 34);
         right: 0;
         top: 0;
         bottom: 0;
+        .avatar-name-plate{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: $color-primary;
+          text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+          margin: 10px;
+          font-size: 20pt;
+        }
       }
       .avatar-holder-active{
         border: 10px solid $color-secondary;

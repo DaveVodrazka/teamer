@@ -17,7 +17,7 @@ function Avatar(props) {
                 className={'avatar-holder ' + (active ? 'avatar-holder-active' : '')}
                 style={bgImage}
             >
-                <h4>{props.person.name}</h4>
+                <div className="avatar-name-plate">{props.person.name}</div>
             </div>
         </div>
     );
