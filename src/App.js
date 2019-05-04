@@ -11,7 +11,6 @@ class App extends Component {
   }
 
   handleActivate(person, active) {
-    console.log(this.state.active);
     if (active) {
       this.setState((state) => {
         state.active.push(person);
