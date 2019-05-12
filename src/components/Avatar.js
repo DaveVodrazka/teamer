@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Avatar(props) {
     const bgImage = {
-        backgroundImage: `url(${props.person.bg})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + props.person.bg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
     };

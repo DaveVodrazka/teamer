@@ -1,0 +1,42 @@
+[
+    {
+        "name": "David",
+        "bg": "/portraits/david.jpg",
+        "id": 1
+    },
+    {
+        "name": "Pavel",
+        "bg": "/portraits/pavel.jpg",
+        "id": 2
+    },
+    {
+        "name": "Filip",
+        "bg": "/portraits/filip.jpg",
+        "id": 3
+    },
+    {
+        "name": "Honza",
+        "bg": "/portraits/honza.jpg",
+        "id": 4
+    },
+    {
+        "name": "Míša",
+        "bg": "/portraits/misa.jpg",
+        "id": 5
+    },
+    {
+        "name": "Veli",
+        "bg": "/portraits/veli.jpg",
+        "id": 6
+    },
+    {
+        "name": "Marek",
+        "bg": "/portraits/marek.jpg",
+        "id": 7
+    },
+    {
+        "name": "Vojta",
+        "bg": "/portraits/vojta.jpg",
+        "id": 8
+    }
+]
