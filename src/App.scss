@@ -3,11 +3,11 @@ $color-border: #2D004B;
 $color-primary: #fff;
 $color-secondary: rgb(34, 104, 34);
 
+body {
+  background-color: $color-background;
+}
 .App {
   text-align: center;
-  width: 100%;
-  height: 100vh;
-  background-color: $color-background;
   box-sizing: border-box;
   .control-panel-container{
     margin: auto;
